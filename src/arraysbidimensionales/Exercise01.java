@@ -34,12 +34,11 @@ public class Exercise01 {
 			System.out.println();
 		}
 		
-		double maximo = notas[0][0];
-		double minimo = notas[0][0];
-		double suma = 0;
-		
 		//Mostramos las notas
 		for(int i = 0; i < notas.length; i++) {
+            double maximo = notas[i][0];
+            double minimo = notas[i][0];
+            double suma = 0;
 			System.out.print("Alumno " + (i+1) + ": ");
 			for(int j = 0; j < notas[i].length; j++) {
 				System.out.print(notas[i][j] + "\t");
@@ -52,12 +51,10 @@ public class Exercise01 {
 				suma += notas[i][j];
 				
 			}
-			System.out.println("Maximo = " + maximo + " | Minimo = " + minimo + " | Media = " + suma / 5);
+			System.out.println(" | Maximo = " + maximo + " | Minimo = " + minimo + " | Media = " + suma / notas[i].length + " |");
 			System.out.println();
 		}
-		
-		
-		
+
 		//Cerramos el Scanner
 		sc.close();
 
